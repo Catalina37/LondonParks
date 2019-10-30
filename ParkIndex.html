@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Defines page browser title -->
+        <title>LondonRoyalParks</title>
+        
+        <!--Defines character set to UTF-8-->
+        <meta  charset="UTF8">
+
+        <!--View port meta tag makes website work on all devices & screen resolutions-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Standardises style needs on all devices & browsers-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        
+        <!--Link the css to this html file -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+        <!--Add Menu Icons from sheet-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       
+        <!-- Slide Show -->
+        <section>
+          <img class="mySlides" src="summer_park.jpg" style="width:100%">
+          <img class="mySlides" src="autumn_park.jpg" style="width:100%">
+          <img class="mySlides" src="winter_park.jpg" style="width:100%">
+          <img class="mySlides" src="spring_park.jpg" style="width:100%">
+        </section>
+
+ 
+        <script>
+        // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+                carousel();
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}
+                  x[myIndex-1].style.display = "block";
+                  setTimeout(carousel, 3000);
+                }
+        </script>
+    </body>
+</html>

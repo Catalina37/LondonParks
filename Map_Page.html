@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MapPage</title>
-    </head>
+<head>
+    <!-- Link CSS to html-->
+    <link href="style.css" rel="stylesheet">
+    
+    <!--View port meta tag makes website work on all devices & screen resolutions-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {box-sizing: border-box}
+        body {font-family: Helvetica, sans-serif;}
+    </style>
+   
+   
+</head>    
+<body >
+<!-- Add navigation bars-->
+<nav id="main" class="navbar fixed-top">
+    <div class="logo">
+      <a href="TestIndex.html"><h3> Famous London Parks  </h3></a>
+    </div>
+    <ul class="nav-links ">
+      <li>
+        <a href="TestIndex.html">Home</a>
+      </li>
+      <li>
+        <a href="Map_Page.html">Map View</a>
+      </li>
+      <li>
+        <a href="About.html">About Us</a>
+      </li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
 
-    <body>
-        <div>
-            <p> <iframe width='100%' height='100%' id='mapcanvas' src='https://maps.google.com/maps?q=London,%20United%20Kingdom&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'><div class="zxos8_gm"><a href="https://sites.google.com/site/creditscoringexplained/hunter-promotion">here</a></div><div style='overflow:hidden;'><div id='gmap_canvas' style='height:100%;width:100%;'></div></div><div><small>Powered by <a href="https://www.embedgooglemap.co.uk">Embed Google Map</a></small></div></iframe>
-            </p>
-        </div>
+<!--Add image with intercactive click-->
+<img class="Main"  src="TubeMapMain.jpg" usemap="#image-map">
+<map name="image-map">
+    <area alt="Kensington" title="Kensington" href="" coords="140,230,40" shape="circle">
+    <area alt="Hyde" title="Hyde" href="" coords="200,280,35"shape="circle">
+    <area alt="James" title="James" href="" coords="300,365,40" shape="circle">
+    <area alt="Green" title="Green" href="" coords="300,263,45" shape="circle">
+    <area alt="Regents" title="Regents" href="" coords="346,130,60" shape="circle">
+</map>
 
-    </body>
-
+</body>
 </html>

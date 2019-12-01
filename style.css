@@ -5,30 +5,30 @@ justify-content: space-around;
 align-items: center;
 min-height: 8vh;
 font-family: 'Helvetica', sans-serif;
-
 }
+
 .navbar.scrolled{
 	background-color: rgba(0,0,0,0.5);
 	transition:background green 1s;
 
 }
 
+/* Logo studd i.e. Famous london parks*/
 .logo{
   color:gray;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
-
 }
 
 .logo a:hover {
-  color: gray;
+  color: green;
   text-shadow: 2px 2px 2px white;
 }
 
-.logo a {
-  color:gray;
-  text-decoration: none;
+.logo a:active {
+  color:red;
+  text-decoration:underline;
 }
 
 .nav-links{
@@ -37,6 +37,7 @@ font-family: 'Helvetica', sans-serif;
   width: 30%;
   text-transform: uppercase;
 }
+
 .nav-links li{
   list-style: none;
 }
@@ -48,9 +49,17 @@ font-family: 'Helvetica', sans-serif;
   font-size: 14px;
 }
 
+/* The 3 navigation links change upon hover*/
 .navbar a:hover {
   border-bottom: 4px solid gray;
+  color: green;
 }
+
+/* The 3 navigation links change upon clicking*/
+.navbar a:active {
+  color:red;
+}
+
 
 .burger{
   display:none;
@@ -70,7 +79,7 @@ font-family: 'Helvetica', sans-serif;
 
 @media screen and (max-width:780px){
   .nav-links{
-    position: absolute;
+    position: auto;
     right:0px;
     height:50vh;
     top:8vh;
@@ -78,7 +87,7 @@ font-family: 'Helvetica', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:30%;
+    width:auto;
     transform: translatex(100%);
 
   }
@@ -94,7 +103,119 @@ font-family: 'Helvetica', sans-serif;
   transition:transform 0.5s ease-in;
 }
 
-.body{
-    background-color: #f2ffe6;
-    background-image: linear-gradient(green, yellow);
+/* Map Page */
+.Main{
+  display: block;
+  width: 50%;
+  height: auto;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* About us Page */
+/* Add padding */
+.container-fluid {
+  padding: 5px;
+  color:black;
+}
+
+
+.About{
+  background-color: #f2ffe6;
+  color: rgb(255, 255, 255); 
+  width: auto;
+  border: 2px solid black;
+  padding:18px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.Team{
+  background-color: #f2ffe6;
+  width: auto;
+  border: 2px solid black;
+  padding:18px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+/* Add interaction when clicking on names*/
+.name:hover {
+  color: green;
+  cursor: pointer;
+  
+}
+
+.name:active {
+  color: red;
+}
+
+
+/* Displayes images with padd around & adds opacity*/
+.teamImage{
+  padding: 0 20px;
+  border-radius: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.teamImage:hover{
+  opacity: 5;
+}
+
+/* Columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Title color */
+.title {
+  color: grey;
+}
+
+/* Add scrollbar on Pages */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  }
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  }
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  }

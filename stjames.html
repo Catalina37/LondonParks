@@ -61,6 +61,76 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+img{
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: flex;
+  margin:5px;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img:hover{
+  border: 2px solid green;
+}
+
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: 80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 
 
 </style>
@@ -89,7 +159,11 @@ body, html {
 <h4> Where to refuel: </h4>
 
 <p> Ole and Steen in Haymarket for a cosy Scandinavian breakfast experience just 10 minutes away.</p>
-
+  <div class="popup" onclick="myFunction()" style=color:#555> <strong>Click here for directions!</strong>
+    <span class="popuptext" id="myPopup"> <div class="mapouter"><div class="gmap_canvas"><iframe width="659" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Ole%20and%20Steen%20in%20Haymarket&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    <a>href="https://www.couponflat.com/plant-therapy-coupon/"</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:659px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:659px;}</style></div>
+    </span>
+  </div>
 <h4> Best Season: </h4>
 
 <p>Autumn, because the crowds can be unbearable in the summer.</p>
@@ -102,6 +176,17 @@ body, html {
     <img class="park-body-image" src="buckinghampalace.jpg">
     <img class="park-body-image" src="themall.jpeg">
 </div>
+
+
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      var toggle="here"
+      popup.classList.toggle("show");
+    }
+</script>
 
 <body>
 

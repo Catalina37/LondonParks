@@ -105,12 +105,16 @@ font-family: 'Helvetica', sans-serif;
 
 /* Map Page */
 .Main{
-  display: block;
-  width: 50%;
-  height: auto;
-  padding: 0 30px;
+  background-color:white;
+  color: rgb(255, 255, 255); 
+  width: auto;
+  border: 2px solid black;
+  padding:18px;
+  margin: 15px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* About us Page */
@@ -118,26 +122,28 @@ font-family: 'Helvetica', sans-serif;
 .container-fluid {
   padding: 5px;
   color:black;
+  border: 1.2px double darkgreen;
 }
 
 
 .About{
-  background-color: #f2ffe6;
+  background-color:white;
   color: rgb(255, 255, 255); 
   width: auto;
   border: 2px solid black;
   padding:18px;
-  margin: 10px;
+  margin: 6px;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .Team{
-  background-color: #f2ffe6;
+  background-color:white;
   width: auto;
   border: 2px solid black;
   padding:18px;
-  margin: 10px;
+  margin: 6px;
   display: flex;
   justify-content: center;
 }
@@ -220,5 +226,10 @@ font-family: 'Helvetica', sans-serif;
   background: #555; 
   }
 
-  console.log("London Parks");
-
+  
+  .footer{background-color:black;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    padding: 1px;
+    margin: 5px;}

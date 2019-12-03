@@ -12,6 +12,7 @@
 <!--Add Menu Icons from sheet-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <style>
 * {box-sizing: border-box}
   body {font-family: Helvetica, sans-serif;}
@@ -21,10 +22,18 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+  background-color:white;
+  color: rgb(255, 255, 255); 
+  width: 50%;
+  border: 2px solid black;
+  padding:10px;
+  margin: 5px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+
+ }
 
 /* Next & previous buttons */
 .prev, .next {
@@ -32,8 +41,8 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  padding: 18px;
+  margin-top: -25px;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -44,7 +53,7 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 26%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -57,26 +66,21 @@ img {vertical-align: middle;}
 .text {
   color:white;
   font-size: 30px;
-  padding: 8px 20px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  width: auto;
   background-color:black;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  padding-top: 2px;
+  position: relative;
+  text-align: center;
+  position: relative;
 }
 
 
 /* Number text (1/4 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  font-size: 13px;
+  padding: 8px 8px;
   position: absolute;
-  top: 0;
+  top: 20%;
 }
 
 /* The dots/bullets/indicators */
@@ -86,7 +90,7 @@ img {vertical-align: middle;}
   width: 15px;
   margin: 0 2px;
   background-color: black;
-  border-radius: 50%;
+  border-radius: 20%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -121,7 +125,7 @@ img {vertical-align: middle;}
 </style>
 </head>
 
-<body bgcolor="#f2ffe6">
+<body bgcolor="#d7ffcc">
   <!-- Add navigation bars-->
   <nav id="main" class="navbar fixed-top">
     <div class="logo">
@@ -182,9 +186,17 @@ img {vertical-align: middle;}
      <span class="dot" onclick="currentSlide(1)"></span> 
      <span class="dot" onclick="currentSlide(2)"></span> 
      <span class="dot" onclick="currentSlide(3)"></span> 
-     <span class="dot" onclick="currentSlide(3)"></span> 
+     <span class="dot" onclick="currentSlide(4)"></span> 
   </div>
 
+  <footer class="footer">
+      <p class="w3-medium"> Get in touch and say 'Hello'</p>
+      <a style="color:white" href="https://outlook.live.com/mail/inbox"><i class="fa fa-envelope"></i></a>
+      <a style="color:white" href="https://www.linkedin.com/in/catalina-romila-125039153/"><i class="fa fa-linkedin"></i></a>
+      <a style="color:white" href="https://www.facebook.com/andreea.romila.5"><i class="fa fa-facebook-official"></i></a>
+      
+      <p class="w3-medium"> Powered by <a style="color:whitesmoke" href="https://github.com/Catalina37" target="_blank">GitHub</a></p>
+    </footer>
 
   <script>
         var slideIndex = 1;
@@ -214,6 +226,7 @@ img {vertical-align: middle;}
           dots[slideIndex-1].className += " active";
         }
   </script>
+
 
 </body>
 </html> 
